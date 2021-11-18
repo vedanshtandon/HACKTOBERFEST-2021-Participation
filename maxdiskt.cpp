@@ -85,19 +85,28 @@ long long int power(int x, int n)
 
 int main()
 {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
+//   ios_base::sync_with_stdio(false);
+//   cin.tie(NULL);
 
-#ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
-#endif
+// #ifndef ONLINE_JUDGE
+//   freopen("input.txt", "r", stdin);
+//   freopen("output.txt", "w", stdout);
+// #endif
 
 
   long long int t;
   cin >> t;
   while (t--)
   {
+      long long int n;
+      cin>>n;
+      for(int i=0;i<n;i++)
+      {
+          long long int a;
+          cin>>a;
+          cout<<a+i<<" ";
+      }
+      cout<<endl;
   }
   return 0;
 }

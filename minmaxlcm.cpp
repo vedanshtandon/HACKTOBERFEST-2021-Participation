@@ -98,6 +98,14 @@ int main()
   cin >> t;
   while (t--)
   {
+      long long int x,k;
+      cin>>x;
+      cin>>k;
+
+      long long int minimum=(x*2);
+      long long int maximum=((x*k)*((x*k)-1));
+
+      cout<<minimum<<" "<<maximum<<endl;
   }
   return 0;
 }

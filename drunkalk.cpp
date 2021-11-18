@@ -98,6 +98,19 @@ int main()
   cin >> t;
   while (t--)
   {
+      long long int n;
+      cin>>n;
+
+      int ans=0;
+      if(n%2==0)
+      {
+          ans=n;
+      }
+      else
+      {
+          ans=((n-1))+3;
+      }
+      cout<<ans<<endl;
   }
   return 0;
 }

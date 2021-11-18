@@ -88,16 +88,42 @@ int main()
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-#ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
-#endif
+// #ifndef ONLINE_JUDGE
+//   freopen("input.txt", "r", stdin);
+//   freopen("output.txt", "w", stdout);
+// #endif
 
 
   long long int t;
   cin >> t;
   while (t--)
   {
+      long long int x,y;
+      string s;
+      cin>>x;
+      cin>>y;
+      cin>>s;
+
+      long long int maximum=0;
+      long long int salaray=0;
+      long long int a=0;
+      for(int i=0;i<s.size();i++)
+      {
+          if(s[i]=='1')
+          {
+              salaray=salaray+x;
+              a++;
+          }
+
+          if(s[i]=='0')
+          {
+              maximum=max(maximum,a);
+              a=0;
+          }
+      }
+      maximum=max(maximum,a);
+      salaray=salaray+(y*maximum);
+      cout<<salaray<<endl;
   }
   return 0;
 }

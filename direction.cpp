@@ -88,16 +88,44 @@ int main()
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-#ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
-#endif
+// #ifndef ONLINE_JUDGE
+//   freopen("input.txt", "r", stdin);
+//   freopen("output.txt", "w", stdout);
+// #endif
 
 
   long long int t;
   cin >> t;
   while (t--)
   {
+      long long int n;
+      int flag=0;
+
+      char ch,a;
+      cin>>n;
+      cin>>ch;
+      for(int i=1;i<n;i++)
+      {
+          cin>>a;
+
+          if(a=='L' && ch=='L')
+          {
+              flag=1;
+          }
+          if(a=='R' && ch=='R')
+          {
+              flag=1;
+          }
+          ch=a;
+      }
+      if(flag==1)
+      {
+          cout<<"YES"<<endl;
+      }
+      else
+      {
+          cout<<"NO"<<endl;
+      }
   }
   return 0;
 }
